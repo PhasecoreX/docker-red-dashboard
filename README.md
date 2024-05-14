@@ -1,6 +1,12 @@
 # Red-Dashboard
 The newest Red-Dashboard ([AAA3A fork](https://github.com/AAA3A-AAA3A/Red-Dashboard)) in a convenient multi-arch container
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/phasecorex/red-dashboard)](https://hub.docker.com/r/phasecorex/red-dashboard)
+[![Build Status](https://github.com/PhasecoreX/docker-red-dashboard/workflows/build/badge.svg)](https://github.com/PhasecoreX/docker-red-dashboard/actions?query=workflow%3Abuild)
+[![Chat Support](https://img.shields.io/discord/608057344487849989)](https://discord.gg/QzdPp2b)
+[![BuyMeACoffee](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-orange)](https://buymeacoff.ee/phasecorex)
+[![PayPal](https://img.shields.io/badge/paypal-donate-blue)](https://paypal.me/pcx)
+
 ## Quick Start
 Follow the install instructions from [the official documentation](https://red-web-dashboard.readthedocs.io/en/latest/index.html), but start from the [Installing Companion Cog](https://red-web-dashboard.readthedocs.io/en/latest/configuration_guides/installing_companion_cog.html) step. Once you have made it to the "Running the Webserver" step, just run this container instead and link it to your [Red-DiscordBot](https://github.com/PhasecoreX/docker-red-discordbot) container:
 
