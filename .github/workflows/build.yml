@@ -78,6 +78,9 @@ jobs:
           tags: |
             ${{ env.GHCR_SLUG }}:latest
             ${{ env.DOCK_SLUG }}:latest
+          build-args: |
+            PCX_DASHBOARD_BUILD=${{ github.run_id }}
+            PCX_DASHBOARD_COMMIT=${{ github.commit }}
           cache-from: |
             ${{ env.GHCR_SLUG }}:latest
           labels: ${{ steps.meta.outputs.labels }}
