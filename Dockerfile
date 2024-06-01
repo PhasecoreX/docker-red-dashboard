@@ -11,3 +11,4 @@ COPY root/ /
 
 CMD ["/app/start-reddash.sh"]
 
+HEALTHCHECK --start-period=5m CMD bash -c "exec 6<> /dev/tcp/127.0.0.1/42356"
