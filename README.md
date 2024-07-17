@@ -11,7 +11,7 @@ The newest Red-Dashboard ([AAA3A fork](https://github.com/AAA3A-AAA3A/Red-Dashbo
 Follow the install instructions from [the official documentation](https://red-web-dashboard.readthedocs.io/en/latest/index.html), but start from the [Installing Companion Cog](https://red-web-dashboard.readthedocs.io/en/latest/configuration_guides/installing_companion_cog.html) step. Once you have made it to the "Running the Webserver" step, just run this container instead and link it to your [Red-DiscordBot](https://github.com/PhasecoreX/docker-red-discordbot) container:
 
 ```
-docker run -v /local_folder_for_persistence:/data --network=container:red-discordbot phasecorex/red-dashboard
+docker run -v /local/folder/for/persistence:/data --network=container:red-discordbot phasecorex/red-dashboard
 ```
 
 You will have to change the `red-discordbot` portion of the `--network` argument to be whatever the name is of your [Red-DiscordBot](https://github.com/PhasecoreX/docker-red-discordbot) container. Also make sure you're running Red-DiscordBot with the `--rpc` flag enabled.
@@ -27,7 +27,7 @@ services:
     container_name: red-discordbot
     restart: always
     volumes:
-      - /local_folder_for_persistence/red-discordbot:/data
+      - /local/folder/for/persistence/red-discordbot:/data
     environment:
       - TZ=America/Detroit
       - PUID=1000
@@ -41,7 +41,7 @@ services:
     depends_on:
       - red-discordbot
     volumes:
-      - /local_folder_for_persistence/red-dashboard:/data
+      - /local/folder/for/persistence/red-dashboard:/data
     environment:
       - TZ=America/Detroit
       - PUID=1000
